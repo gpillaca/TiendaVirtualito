@@ -3,6 +3,7 @@ package daofactory;
 import dao.interfaces.AdministradorDAO;
 import dao.interfaces.CategoriaDAO;
 import dao.interfaces.ClienteDAO;
+import dao.interfaces.PedidoDAO;
 import dao.interfaces.ProductoDAO;
 
 public abstract class DAOFactory {
@@ -13,6 +14,7 @@ public abstract class DAOFactory {
 	public abstract ClienteDAO getClienteDAO();
 	public abstract CategoriaDAO getCategoriaDAO();
 	public abstract AdministradorDAO getAdministracorDAO();
+	public abstract PedidoDAO getPedidoDAO();
 	
 	public static DAOFactory getFAOFactory(int factory){
 		switch (factory) {

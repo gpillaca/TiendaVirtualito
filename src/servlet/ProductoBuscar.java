@@ -43,8 +43,8 @@ public class ProductoBuscar extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String nombre = request.getParameter("nombre");
-		
-		
+		System.out.println("nombre " +nombre);	
+			
 			ArrayList<ProductoBean> productos = null;
 			try {
 				DAOFactory daoFactory = DAOFactory.getFAOFactory(DAOFactory.MYSQL);
@@ -55,7 +55,7 @@ public class ProductoBuscar extends HttpServlet {
 				// TODO: handle exception
 				e.getMessage();
 			}
-			
+
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/CategoriaListar");
 			request.setAttribute("productos", productos);
 			rd.include(request, response);

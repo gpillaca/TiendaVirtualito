@@ -6,10 +6,12 @@ import java.sql.DriverManager;
 import dao.interfaces.AdministradorDAO;
 import dao.interfaces.CategoriaDAO;
 import dao.interfaces.ClienteDAO;
+import dao.interfaces.PedidoDAO;
 import dao.interfaces.ProductoDAO;
 import dao.mysql.Mysql_AdministradorDAO;
 import dao.mysql.Mysql_CategoriaDAO;
 import dao.mysql.Mysql_ClienteDAO;
+import dao.mysql.Mysql_PedidoDAO;
 import dao.mysql.Mysql_ProductoDAO;
 
 public class MysqlDAOFactory extends DAOFactory{
@@ -53,6 +55,12 @@ public class MysqlDAOFactory extends DAOFactory{
 	public AdministradorDAO getAdministracorDAO() {
 		// TODO Auto-generated method stub
 		return new Mysql_AdministradorDAO();
+	}
+
+	@Override
+	public PedidoDAO getPedidoDAO() {
+		// TODO Auto-generated method stub
+		return new Mysql_PedidoDAO();
 	}
 
 }

@@ -35,6 +35,7 @@ public class CategoriaListar extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		ArrayList<CategoriaBean> categorias = null;
+		System.out.println("ssssss");
 		try {
 			DAOFactory daoFactory = DAOFactory.getFAOFactory(DAOFactory.MYSQL);
 			CategoriaDAO categoriaDAO = daoFactory.getCategoriaDAO();
@@ -42,7 +43,7 @@ public class CategoriaListar extends HttpServlet {
 		} catch (Exception e) {
 			e.getMessage();
 		}
-		
+		System.out.println(categorias);
 		RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.jsp");
 		request.setAttribute("categorias", categorias);
 		rd.forward(request, response);
@@ -54,7 +55,7 @@ public class CategoriaListar extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		
+		doGet(request, response);
 		
 		
 	}

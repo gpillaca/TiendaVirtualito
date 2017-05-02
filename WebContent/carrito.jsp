@@ -24,7 +24,9 @@
 		<div class="col-md-9">
 		
 			<div>
+				<form action="<%=getServletContext().getContextPath()%>/ProductoReistrarPedido" method="post">
 				<input type="submit" class="btn btn-default" value="Comprar">
+				</form>
 				<br>
 				<br>
 				<table class="table table-hover" width="100%">
